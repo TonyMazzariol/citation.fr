@@ -7,14 +7,14 @@ $main-yellow : #F7EA3B;
 
 body {
   background-color: $bg-light;
-}
+  a:hover {
+    color: $main-blue;
+  }
+} 
 
 header {
   background-color: $main-pink;
   color: #fff;
-  a:hover {
-    color: $main-yellow;
-  }
 }
 
 .card {
@@ -22,6 +22,26 @@ header {
   border-radius: 35rem;
   padding: 5rem;
   margin: 5rem;
+}
+
+.pagination {
+  .pagination_list {
+    display: none;
+  }
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  nav {
+    padding: 3rem;
+    a, span {
+      font-size: x-large;
+      padding: 1rem;
+      margin: 1rem;
+      svg {
+        width: 40px;
+      }
+    }
+  }
 }
 
 footer {

@@ -17,7 +17,7 @@ class QuotesController extends Controller
     
     public function quotes()
     {
-        $quotes = Quotes::all();
+        $quotes = Quotes::paginate(10);
 
         return view('Quotes', [
             'quotes' => $quotes,

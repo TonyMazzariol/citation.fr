@@ -12,4 +12,6 @@
 
 @endforeach
 
+<div class="pagination">{{ $authors->links() }}</div>
+
 @endsection

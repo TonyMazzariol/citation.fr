@@ -1,13 +1,13 @@
 body {
   background-color: #F0EDE8;
 }
+body a:hover {
+  color: #0AC0F7;
+}
 
 header {
   background-color: #F72360;
   color: #fff;
-}
-header a:hover {
-  color: #F7EA3B;
 }
 
 .card {
@@ -15,6 +15,26 @@ header a:hover {
   border-radius: 35rem;
   padding: 5rem;
   margin: 5rem;
+}
+
+.pagination {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.pagination .pagination_list {
+  display: none;
+}
+.pagination nav {
+  padding: 3rem;
+}
+.pagination nav a, .pagination nav span {
+  font-size: x-large;
+  padding: 1rem;
+  margin: 1rem;
+}
+.pagination nav a svg, .pagination nav span svg {
+  width: 40px;
 }
 
 footer {
