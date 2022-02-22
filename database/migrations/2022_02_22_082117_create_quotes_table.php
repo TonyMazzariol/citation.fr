@@ -3,8 +3,9 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use App\Models\Authors;
 
-class Quotes extends Migration
+class CreateQuotesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -14,19 +15,12 @@ class Quotes extends Migration
     public function up()
     {
         Schema::create('quotes', function (Blueprint $table) {
-            $table->bigIncrements('quote_id');
-            $table->longText('quote_content');
-            
-            $table->bigInteger('author_id', false, true)->unsigned()->index();
-
-            $table->foreign('author_id')
-                ->references('author_id')
-                ->on('authors')
-                ->onUpdate('cascade')
-                ->onDelete('cascade');
-            
+            $table->id();
+            $table->text('content');
             $table->timestamps();
-    });
+
+            $table->foreignIdFor(Authors::Class)->unsigned()->nullable();
+        });
     }
 
     /**

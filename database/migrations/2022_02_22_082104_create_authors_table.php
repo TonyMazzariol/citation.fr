@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class Authors extends Migration
+class CreateAuthorsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -14,12 +14,12 @@ class Authors extends Migration
     public function up()
     {
         Schema::create('authors', function (Blueprint $table) {
-            $table->bigIncrements('author_id');
-            $table->string('author_firstname');
-            $table->string('author_lastname');
-     
-            $table->timestamps();
-    });
+            $table->id();
+            $table->string('first_name');
+            $table->string('last_name');
+            $table->timestamp('created_at');
+            $table->timestamp('updated_at');
+        });
     }
 
     /**
