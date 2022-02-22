@@ -19,6 +19,7 @@ class CreateQuotesTable extends Migration
             $table->text('content');
             $table->timestamps();
 
+            $table->foreign('authors_id')->references('id')->on('authors');
             $table->foreignIdFor(Authors::Class)->unsigned()->nullable();
         });
     }

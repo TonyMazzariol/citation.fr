@@ -1,0 +1,30 @@
+$bg-light : #F0EDE8;
+$main-pink : #F72360;
+$dark-pink : #AB0736;
+$main-blue : #0AC0F7;
+$dark-blue : #3391AD;
+$main-yellow : #F7EA3B;
+
+body {
+  background-color: $bg-light;
+}
+
+header {
+  background-color: $main-pink;
+  color: #fff;
+  a:hover {
+    color: $main-yellow;
+  }
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 35rem;
+  padding: 5rem;
+  margin: 5rem;
+}
+
+footer {
+  background-color: #F72360;
+}
+

@@ -17,7 +17,7 @@ class Quotes extends Model
      *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function Authors (): BelongsTo
+    public function Authors ()
     {
         return $this->belongsTo(Authors::class);
     }

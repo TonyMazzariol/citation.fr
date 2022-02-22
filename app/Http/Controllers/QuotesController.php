@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreQuotesRequest;
 use App\Http\Requests\UpdateQuotesRequest;
 use App\Models\Quotes;
+use App\Models\Authors;
 
 class QuotesController extends Controller
 {
@@ -13,9 +14,15 @@ class QuotesController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    
+    public function quotes()
     {
-        //
+        $quotes = Quotes::all();
+
+        return view('Quotes', [
+            'quotes' => $quotes,
+        ]);
+
     }
 
     /**

@@ -13,9 +13,13 @@ class AuthorsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function authors()
     {
-        //
+        $authors = authors::all();
+
+        return view('Authors', [
+            'authors' => $authors,
+        ]);
     }
 
     /**

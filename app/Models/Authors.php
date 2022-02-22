@@ -15,10 +15,5 @@ class Authors extends Model
     /**
      * Get all of the Quotes for the Authors
      *
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
-    public function Quotes(): HasMany
-    {
-        return $this->hasMany(Quotes::class);
-    }
 }

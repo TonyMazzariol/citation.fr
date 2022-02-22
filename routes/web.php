@@ -1,6 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\MainController;
+use App\Http\Controllers\QuotesController;
+use App\Http\Controllers\AuthorsController;
+use App\Http\Controllers\AuthorController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +17,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [MainController::class, 'index'])->name('Home');
+
+Route::get('/quotes', [QuotesController::class, 'quotes'])->name('Quotes');
+
+Route::get('/authors', [AuthorsController::class, 'authors'])->name('Authors');
+
+Route::get('/authors/{id}', [AuthorController::class, 'author'])->name('Author');

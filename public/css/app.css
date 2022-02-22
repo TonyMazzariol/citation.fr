@@ -1,0 +1,22 @@
+body {
+  background-color: #F0EDE8;
+}
+
+header {
+  background-color: #F72360;
+  color: #fff;
+}
+header a:hover {
+  color: #F7EA3B;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 35rem;
+  padding: 5rem;
+  margin: 5rem;
+}
+
+footer {
+  background-color: #F72360;
+}
