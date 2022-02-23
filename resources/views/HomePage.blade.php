@@ -9,5 +9,12 @@
     <div class="">{{ $quote->content }}</div>
       
   </div>
-
+  @auth()
+  <div>
+    <button><a href="/create" >Ajouter une nouvelle citation</a></button>
+    <button>Supprimer</button>
+    <button ><a href="quote/{{ $quote->id }}/edit">Modifier</a></button>
+  </div>
+  @endauth
+  
 @endsection

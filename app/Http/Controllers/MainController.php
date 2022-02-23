@@ -14,14 +14,15 @@ class MainController extends Controller
     {
         $quote = Quotes::orderby('created_at', 'desc')->first();
 
+        $id = $quote->authors_id;
+
+        $author = Authors::find($id);
+
+        // var_dump($quote);
+
         return view('HomePage', [
-            'author' => $this->getAuthorFullName($quote->authors_id)->first(),
+            'author' => $author,
             'quote' => $quote
         ]);
-    }
-
-    public function authors()
-    {
-        return view('Authors');
     }
 }

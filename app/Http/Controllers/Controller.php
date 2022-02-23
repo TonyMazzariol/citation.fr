@@ -12,9 +12,4 @@ use App\Models\Authors;
 class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
-
-    public function getAuthorFullName ($id) {
-        return Authors::get()->where('id', $id);
-    }
-
 }

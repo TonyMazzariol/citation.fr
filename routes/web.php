@@ -5,6 +5,7 @@ use App\Http\Controllers\MainController;
 use App\Http\Controllers\QuotesController;
 use App\Http\Controllers\AuthorsController;
 use App\Http\Controllers\AuthorController;
+use App\Http\Controllers\DataController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,13 +18,16 @@ use App\Http\Controllers\AuthorController;
 |
 */
 
+Route::get('/', function () {
+  return view('welcome');
+});
+
 Route::get('/dashboard', function () {
   return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
 
-
-Route::get('/', [MainController::class, 'index'])->name('Home');
+Route::get('/home', [MainController::class, 'index'])->name('Home');
 
 Route::get('/quotes', [QuotesController::class, 'quotes'])->name('Quotes');
 
@@ -31,5 +35,12 @@ Route::get('/authors', [AuthorsController::class, 'authors'])->name('Authors');
 
 Route::get('/authors/{id}', [AuthorController::class, 'author'])->name('Author');
 
+Route::get('/quote/{id}/edit', [DataController::class, 'edit']);
+
+Route::put('/quote/{id}', [DataController::class, 'update']);
+
+Route::get('/create', [DataController::class, 'create']);
+
+Route::post('/store', [DataController::class, 'store']);
 
 require __DIR__.'/auth.php';

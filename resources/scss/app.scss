@@ -17,6 +17,18 @@ header {
   color: #fff;
 }
 
+button {
+  color: #fff;
+  font-size: larger;
+  background-color: $main-blue;
+  border-radius: 35rem;
+  padding: 2rem 3rem;
+  margin: 1rem;
+  &:hover {
+    background-color: $dark-blue;
+  }
+}
+
 .card {
   background-color: #fff;
   border-radius: 35rem;

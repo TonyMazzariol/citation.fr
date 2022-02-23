@@ -10,6 +10,10 @@ class Quotes extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'content', 'authors_id'
+    ];
+
     // public $timestamps = falses;
 
     /**

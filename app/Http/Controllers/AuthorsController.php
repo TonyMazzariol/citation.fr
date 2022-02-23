@@ -15,7 +15,7 @@ class AuthorsController extends Controller
      */
     public function authors()
     {
-        $authors = authors::paginate(10);;
+        $authors = Authors::paginate(10);;
 
         return view('Authors', [
             'authors' => $authors,

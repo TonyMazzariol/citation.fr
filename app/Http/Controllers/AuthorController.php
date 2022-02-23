@@ -12,7 +12,7 @@ class AuthorController extends Controller
 {
     public function author($id) {
 
-        $author = ($this->getAuthorFullName($id)[$id-1]);
+        $author = ($this->getAuthorFullName($id));
 
         // dd($id);
         // dd($author);
