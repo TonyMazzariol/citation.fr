@@ -17,6 +17,12 @@ use App\Http\Controllers\AuthorController;
 |
 */
 
+Route::get('/dashboard', function () {
+  return view('dashboard');
+})->middleware(['auth'])->name('dashboard');
+
+
+
 Route::get('/', [MainController::class, 'index'])->name('Home');
 
 Route::get('/quotes', [QuotesController::class, 'quotes'])->name('Quotes');
@@ -24,3 +30,6 @@ Route::get('/quotes', [QuotesController::class, 'quotes'])->name('Quotes');
 Route::get('/authors', [AuthorsController::class, 'authors'])->name('Authors');
 
 Route::get('/authors/{id}', [AuthorController::class, 'author'])->name('Author');
+
+
+require __DIR__.'/auth.php';
